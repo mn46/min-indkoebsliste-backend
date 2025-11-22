@@ -4,11 +4,12 @@
     <v-main class="mt-0">
       <ShoppingList />
       <PlusButton />
+            <LoginBtnVue/>
+
 
     </v-main>
 
     <the-footer>
-      <LoginBtnVue/>
     </the-footer>
   </v-app>
 </template>

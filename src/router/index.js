@@ -33,7 +33,6 @@ const router = createRouter({
     },
     {
       path:'/login',
-      name: Login,
       component: 'loginBtn'
 
     }
