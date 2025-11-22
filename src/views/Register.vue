@@ -13,10 +13,14 @@
         :rules="rules"
         label="UserPassword"
       ></v-text-field>
+       <v-text-field
+        v-model="RepeatPassword"
+        :rules="rules"
+        label="UserPassword"
+      ></v-text-field>
       <v-btn class="mt-2" type="submit" block>Submit</v-btn>
-      </v-form>
+    </v-form>
   </v-sheet>
-  <register-btn></register-btn>
 </template>
 
 <script>
@@ -26,14 +30,13 @@ import {
   mdiLinkedin,
   mdiInstagram,
 } from "@mdi/js";
+
 import LoginBtnVue from "@/components/UI/LoginBtn.vue";
 import TheHeaderAdmin from '@/components/layout/TheHeaderAdmin.vue';
-import RegisterBtn from "@/components/UI/RegisterBtn.vue";
 export default {
   components: {
     LoginBtnVue,
-    TheHeaderAdmin,
-    RegisterBtn,
+    TheHeaderAdmin
   },
 
   data() {
