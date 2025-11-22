@@ -3,7 +3,7 @@ import ListsView from "@/views/ListsView.vue";
 import ListDetails from "@/views/ListDetails.vue";
 import HomePage from "@/views/HomePage.vue";
 import AddNewList from "@/views/AddNewList.vue";
-
+import Login from "@/views/Login.vue"
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -31,6 +31,12 @@ const router = createRouter({
       path: "/:pathMatch(.*)*",
       redirect: "/lists",
     },
+    {
+      path:'/login',
+      name: Login,
+      component: 'loginBtn'
+
+    }
   ],
 });
 

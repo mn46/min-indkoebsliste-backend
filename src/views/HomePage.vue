@@ -4,9 +4,12 @@
     <v-main class="mt-0">
       <ShoppingList />
       <PlusButton />
+
     </v-main>
 
-    <the-footer></the-footer>
+    <the-footer>
+      <LoginBtnVue/>
+    </the-footer>
   </v-app>
 </template>
 <script>
@@ -16,6 +19,7 @@ import TheHeader from "../components/layout/TheHeader.vue";
 import TheFooter from "../components/layout/TheFooter.vue";
 //import GreenDropDown from "./components/layout/GreenDropDown.vue";
 import AddNewList from "../views/AddNewList.vue";
+import LoginBtnVue from '@/components/UI/LoginBtn.vue';
 export default {
   components: {
     ShoppingList,
@@ -24,6 +28,7 @@ export default {
     TheFooter,
     //GreenDropDown,
     AddNewList,
+    LoginBtnVue
   },
 };
 </script>
