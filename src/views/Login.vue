@@ -1,6 +1,7 @@
 <template>
 
 <the-header-admin/>
+<main>
   <v-sheet class="mx-auto" width="300">
     <v-form @submit.prevent>
       <v-text-field
@@ -13,11 +14,26 @@
         :rules="rules"
         label="UserPassword"
       ></v-text-field>
+      <v-btn class="mt-2" type="submit" block>{{RegisterText}}</v-btn>
       <v-btn class="mt-2" type="submit" block>Submit</v-btn>
-      </v-form>
+    </v-form>
   </v-sheet>
-  <register-btn></register-btn>
+ </main>
 </template>
+
+<script setup>
+  import { ref } from 'vue'
+
+  const Username = ref('')
+  const UserPassword = ref('')
+
+  const rules = [
+    value => {
+      if (value) return true
+      return 'You must enter a first name.'
+    },
+  ]
+</script>
 
 <script>
 import {
@@ -26,12 +42,12 @@ import {
   mdiLinkedin,
   mdiInstagram,
 } from "@mdi/js";
-import LoginBtnVue from "@/components/UI/LoginBtn.vue";
+import LoginBtn from "@/components/UI/LoginBtn.vue";
 import TheHeaderAdmin from '@/components/layout/TheHeaderAdmin.vue';
 import RegisterBtn from "@/components/UI/RegisterBtn.vue";
 export default {
   components: {
-    LoginBtnVue,
+    LoginBtn,
     TheHeaderAdmin,
     RegisterBtn,
   },
@@ -39,6 +55,7 @@ export default {
   data() {
     return {
       icons: [mdiFacebook, mdiTwitter, mdiLinkedin, mdiInstagram],
+      RegisterText: 'register'
     };
   },
 };

@@ -1,6 +1,5 @@
 <template>
-  <v-footer class="text-center d-flex flex-column ga-2 py-4 bg-primary" color="indigo-lighten-1">     <LoginBtnVue/>
-
+  <v-footer class="text-center d-flex flex-column ga-2 py-4 bg-primary" color="indigo-lighten-1">
     <div class="d-flex ga-3">
       <v-btn
         v-for="icon in icons"
@@ -9,22 +8,23 @@
         density="comfortable"
         variant="text"
       ></v-btn>
+      <login-btn/>
     </div>
+    
   </v-footer>
 </template>
 <script>
 import { mdiFacebook, mdiTwitter, mdiLinkedin, mdiInstagram } from "@mdi/js";
-import LoginBtnVue from '@/components/UI/LoginBtn.vue';
+import LoginBtn from '@/components/UI/LoginBtn.vue';
 export default {
   components: {
-     LoginBtnVue
+    LoginBtn,
   },
   data() {
     return {
       icons: [mdiFacebook, mdiTwitter, mdiLinkedin, mdiInstagram],
     };
   },
-
   methods: {},
 };
 </script>

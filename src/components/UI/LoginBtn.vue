@@ -7,6 +7,7 @@
 <script>
 import {mdiDoor} from "@mdi/js";
     export default{
+       name:  `LoginBtn`,
         data(){
             return {
                 mdiDoor,

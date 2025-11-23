@@ -31,12 +31,12 @@ import {
   mdiInstagram,
 } from "@mdi/js";
 
-import LoginBtnVue from "@/components/UI/LoginBtn.vue";
 import TheHeaderAdmin from '@/components/layout/TheHeaderAdmin.vue';
+import LoginBtnForm from '@/components/UI/LoginBtnForm.vue';
 export default {
   components: {
-    LoginBtnVue,
-    TheHeaderAdmin
+    LoginBtnForm,
+    TheHeaderAdmin,
   },
 
   data() {
