@@ -26,7 +26,10 @@ export default{
     }
 }
 </script>
-<style scoped>
+<style >
+.main-layout.login-bg{
+    
+}
 
 </style>
 <!-- “Her er min header, footer og baggrund. Der, hvor <slot> står, sætter jeg alt indhold fra den side, der bruger layoutet. -->
