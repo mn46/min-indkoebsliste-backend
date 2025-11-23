@@ -1,5 +1,5 @@
 <template>
-    <v-btn class="register"
+    <v-btn class="register" 
     :to="{path: '/register'}">register</v-btn>
 </template>
 <script>

@@ -13,8 +13,9 @@
         :rules="rules"
         label="UserPassword"
       ></v-text-field>
-      <v-btn class="mt-2" type="submit" block>{{RegisterText}}</v-btn>
-      <v-btn class="mt-2" type="submit" block>Submit</v-btn>
+      <v-btn class="mt-2"  color="grey" type="submit" block>{{RegisterText}}</v-btn>
+  
+      <v-btn class="mt-2"  color="#096123"  type="submit" block>Submit</v-btn>
     </v-form>
   </v-sheet>
  </AdminMain>
@@ -45,12 +46,14 @@ import LoginBtn from "@/components/UI/LoginBtn.vue";
 import TheHeaderAdmin from '@/components/layout/TheHeaderAdmin.vue';
 import RegisterBtn from "@/components/UI/RegisterBtn.vue";
 import AdminMain from "@/components/layout/AdminMain.vue";
+
 export default {
   components: {
     LoginBtn,
     TheHeaderAdmin,
     RegisterBtn,
     AdminMain,
+    RegisterBtn
   },
 
   data() {

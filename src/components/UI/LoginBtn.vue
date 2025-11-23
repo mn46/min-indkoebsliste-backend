@@ -3,13 +3,21 @@
     :icon="mdiDoor"
     size="large"
     :to="{path: '/login'}"></v-btn> -->
-    <button :class="['button-door', backgroundBtnClass]" :to="{path: '/login'}"></button><p>logud</p>
+<div class="d-flex align-center flex-column justify-end ">
+           <button :class="['button-door', backgroundBtnClass]" :to="{path: '/login'}"></button>
+    <p>Admin Login</p> 
+    </div>
+    
 </template>
 <script>
 import {mdiDoor} from "@mdi/js";
     export default{
        name: 'LoginBtn', 
         props:{
+            Loginis:{
+                type: Boolean,
+                default: false
+            },
             backgroundBtnClass:{
                 type: String,
                 default: '' 
@@ -27,8 +35,8 @@ import {mdiDoor} from "@mdi/js";
 <style>
 
 .button-door{
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
 background: bluenpm ;
 }
 .button-door.login  {
@@ -44,8 +52,22 @@ background: bluenpm ;
       background-image: url('@/assets/log-out-door.png');
       background-size: contain;
         background-repeat: no-repeat;
+       
 
 
 }
 
 </style>
+
+<!--
+-CHAT-GPT DIREKTE KOPIERET
+"det her er vue 3 kan du gøre sådan at det er flex directioun column?"": 
+ "d-flex ga-3
+ | Klasse        | Effekt                 |
+| ------------- | ---------------------- |
+| `d-flex`      | display: flex          |
+| `flex-column` | flex-direction: column |
+| `ga-3`        | gap: var(--v-space-3)  |
+
+ 
+ -->

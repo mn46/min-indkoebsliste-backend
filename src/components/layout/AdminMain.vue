@@ -45,13 +45,14 @@ export default{
   
 }
 .main-layout.login-bg{
-  background-image: url('@/assets/grocerybag-low-opacity.png');
+  background-image: url('@/assets/grocerybag-low-opacity-no-blur.png');
   background-size: 60%;
   background-repeat: no-repeat;
-  background-position: 150%  110%;
+  background-position: 150%  0%;
 }
 .main-layout.register-bg{
-    background: url('@/assets/grocerybag-high-opacity-with-blur.png') center/cover no-repeat;
+/* finde et billede eller lign */
+    /* background: url('@/assets/grocerybag-high-opacity-with-blur.png') center/cover no-repeat; */
 }
 
 </style>
