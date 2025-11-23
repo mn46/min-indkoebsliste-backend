@@ -8,16 +8,15 @@
         density="comfortable"
         variant="text"
       ></v-btn>
-      <login-btn/>
     </div>
-    
+    <LoginBtn backgroundBtnClass='logout'/>
   </v-footer>
 </template>
 <script>
 import { mdiFacebook, mdiTwitter, mdiLinkedin, mdiInstagram } from "@mdi/js";
 import LoginBtn from '@/components/UI/LoginBtn.vue';
 export default {
-  components: {
+  components:{
     LoginBtn,
   },
   data() {

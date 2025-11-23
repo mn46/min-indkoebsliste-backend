@@ -1,18 +1,20 @@
-<template>
+<template>   
+ <TheHeaderAdmin/> 
    <div :class="['main-layout', backgroundClass]">
-    <TheHeaderAdmin/> 
+
     <main>
-<slot/>
+        <slot/>
 
     </main>  
+      </div>
       <TheFooter/>
 
 </template>
 
 
 <script>
-import TheHeaderAdmin from '@/components/layout/TheHeaderAdmin.vue';
-import TheFooter from '@/components/layout/FooterAdmin.vue';
+import TheHeaderAdmin from '@/components/layout/TheHeaderAdmin.vue'
+import TheFooter from '@/components/layout/TheFooter.vue' 
 export default{
     name: 'MainLayout',
     components:{
@@ -27,8 +29,29 @@ export default{
 }
 </script>
 <style >
+ *{
+    padding:0px;
+    margin:0px;
+ }
+.main-layout{
+ display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  
+  
+}
 .main-layout.login-bg{
-    
+  background-image: url('@/assets/grocerybag-low-opacity.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 150%  110%;
+}
+.main-layout.register-bg{
+    background: url('@/assets/grocerybag-high-opacity-with-blur.png') center/cover no-repeat;
 }
 
 </style>

@@ -31,7 +31,6 @@ header{
     width: 100vw;
     border-bottom-left-radius: 58px;
     border-bottom-right-radius: 58px;
-    margin-bottom: 10vh;
     
       box-shadow: inset 8px -40px 15px rgba(0, 0, 0, 0.25);
 /*box-shadow fra chat-gpt
