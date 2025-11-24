@@ -7,7 +7,7 @@ import LoginBtn from "@/views/Login.vue";
 // import RegisterBtn from "@/views/Login.vue";
 // import RegisterBtn from "@/components/UI/RegisterBtn.vue";
 import RegisterBtn from "@/views/Login.vue";
-
+import LoginFormBtn from "@/views/Login.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -42,7 +42,13 @@ const router = createRouter({
     },{
       path: "/register",
       component: RegisterBtn,
-    }
+    },
+    {
+      path: "/homepageadmin.vue",
+      component: LoginFormBtn,
+      //  path: "/homepageadmin.vue/:id",
+
+    },
   ],
 });
 

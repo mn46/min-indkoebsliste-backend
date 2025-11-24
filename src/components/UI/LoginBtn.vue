@@ -4,7 +4,7 @@
     size="large"
     :to="{path: '/login'}"></v-btn> -->
 <div class="d-flex align-center flex-column justify-end ">
-           <button :class="['button-door', backgroundBtnClass]" :to="{path: '/login'}" @click="handleClick"></button>
+           <button :class="['button-door login', backgroundBtnClass]" :to="{path: '/login'}" @click="handleClick"></button>
     <p>Admin Login</p> 
     </div>
     
@@ -43,9 +43,25 @@ import {mdiDoor} from "@mdi/js";
             return this.text ? 'Log Ud' : 'Log ind'
 
         },  
+      
+
 
     },
-    
+    methods:{
+          handleClick(){
+
+    if (this.isLoggedIn) {
+this.$router.push('/logout')
+//hvis brugeren er logget, når brugeren så klikker på 
+// Vil brugeren blive logget ud
+
+} else {
+
+this.$router.push('/login')
+}
+          }
+
+    }
 
     }
 

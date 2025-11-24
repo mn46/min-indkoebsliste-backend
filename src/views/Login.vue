@@ -1,24 +1,15 @@
-<template>
+<template> 
+<TheHeaderAdmin/>
+  <main class="main-layout login-bg">
 
-<AdminMain backgroundClass="login-bg">
-  <v-sheet class="mx-auto" width="300">
-    <v-form @submit.prevent>
-      <v-text-field
-        v-model="Username"
-        :rules="rules"
-        label="Username"
-      ></v-text-field>
-      <v-text-field
-        v-model="UserPassword"
-        :rules="rules"
-        label="UserPassword"
-      ></v-text-field>
-      <v-btn class="mt-2"  color="grey" type="submit" block>{{RegisterText}}</v-btn>
-  
-      <v-btn class="mt-2"  color="#096123"  type="submit" block>Submit</v-btn>
-    </v-form>
-  </v-sheet>
- </AdminMain>
+
+  <LoginForm/>
+
+</main>
+    <TheFooter/>
+
+
+
 </template>
 
 <script setup>
@@ -46,14 +37,20 @@ import LoginBtn from "@/components/UI/LoginBtn.vue";
 import TheHeaderAdmin from '@/components/layout/TheHeaderAdmin.vue';
 import RegisterBtn from "@/components/UI/RegisterBtn.vue";
 import AdminMain from "@/components/layout/AdminMain.vue";
-
+import LoginBtnForm from '../components/UI/LoginBtnForm.vue'
+import TheFooter from   '../components/layout/TheFooter.vue'
+// import RegisterBtn from '../components/UI/RegisterBtn.vue'
+import LoginForm from '../components/LoginForm.vue';
 export default {
+
   components: {
     LoginBtn,
     TheHeaderAdmin,
     RegisterBtn,
     AdminMain,
-    RegisterBtn
+    LoginBtnForm,
+    TheFooter,
+    LoginForm,
   },
 
   data() {
@@ -64,3 +61,29 @@ export default {
   },
 };
 </script>
+<style>
+.main-layout{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+   background-image: url('@/assets/grocerybag-low-opacity-no-blur.png');
+    background-repeat: no-repeat;
+  background-position: 150%  0%;
+
+  }
+
+
+.main-layout.login-bg{
+  background-image: url('@/assets/grocerybag-low-opacity-no-blur.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 150%  0%;
+}
+
+</style>
+
+

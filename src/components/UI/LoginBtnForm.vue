@@ -1,5 +1,5 @@
 <template>
-  <v-btn></v-btn>
+  <v-btn :to="{path:'/HomePageAdmin.vue'}">Login</v-btn>
 </template>
 
 <script>

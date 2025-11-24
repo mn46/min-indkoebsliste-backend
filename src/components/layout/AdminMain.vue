@@ -1,13 +1,8 @@
-<template>   
- <TheHeaderAdmin/> 
+<template>  
+
    <div :class="['main-layout', backgroundClass]">
 
-    <main>
-        <slot/>
-
-    </main>  
-      </div>
-      <TheFooter/>
+   </div>
 
 </template>
 
