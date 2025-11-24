@@ -6,8 +6,12 @@ import AddNewList from "@/views/AddNewList.vue";
 import LoginBtn from "@/views/Login.vue";
 // import RegisterBtn from "@/views/Login.vue";
 // import RegisterBtn from "@/components/UI/RegisterBtn.vue";
-import RegisterBtn from "@/views/Login.vue";
-import LoginFormBtn from "@/views/Login.vue";
+// import RegisterBtn from "@/views/Login.vue";
+// import LoginFormBtn from "@/views/Login.vue";
+import LoginPage from "@/views/Login.vue";
+import HomePageAdmin from "@/views/HomePageAdmin.vue"
+
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -39,16 +43,19 @@ const router = createRouter({
       path:"/login",
       component: LoginBtn
 
-    },{
-      path: "/register",
-      component: RegisterBtn,
     },
     {
-      path: "/homepageadmin.vue",
-      component: LoginFormBtn,
+      path: "/homepageadmin",
+      component: LoginPage,
       //  path: "/homepageadmin.vue/:id",
 
     },
+     {
+      path: "/HomePageAdmin",
+      component: HomePageAdmin,
+      //  path: "/homepageadmin.vue/:id",
+
+    }
   ],
 });
 

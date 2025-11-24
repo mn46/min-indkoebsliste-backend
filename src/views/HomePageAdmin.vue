@@ -1,5 +1,8 @@
 <template>
   <v-app>
+    <TheHeaderAdmin/>
+    
+<TheFooter/>    
   </v-app>
 </template>
 <script>

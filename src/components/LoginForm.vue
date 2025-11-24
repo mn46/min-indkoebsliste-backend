@@ -23,9 +23,6 @@ import LoginBtnForm from '../components/UI/LoginBtnForm.vue'
 
 export default {
   name: 'LoginForm',
-emits:{
-
-},
   components: {
     LoginBtnForm,
   },
