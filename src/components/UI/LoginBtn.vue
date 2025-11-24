@@ -4,7 +4,7 @@
     size="large"
     :to="{path: '/login'}"></v-btn> -->
 <div class="d-flex align-center flex-column justify-end ">
-           <button :class="['button-door', backgroundBtnClass]" :to="{path: '/login'}"></button>
+           <button :class="['button-door', backgroundBtnClass]" :to="{path: '/login'}" @click="handleClick"></button>
     <p>Admin Login</p> 
     </div>
     
@@ -14,20 +14,38 @@ import {mdiDoor} from "@mdi/js";
     export default{
        name: 'LoginBtn', 
         props:{
-            Loginis:{
+            LoginStatus:{
                 type: Boolean,
                 default: false
             },
             backgroundBtnClass:{
                 type: String,
                 default: '' 
-            }
+            },
+        
         },
         data(){
             return {
                 mdiDoor,
             };
         },
+
+    computed:{
+
+        buttonClass(){
+            // Hvis Loginstatus er sand (bolean true) skal logout klassen stå på, ellers skal klasse login være der
+
+            return this.LoginStatus ? 'logout' : 'login'
+        },
+
+        text(){
+
+            return this.text ? 'Log Ud' : 'Log ind'
+
+        },  
+
+    },
+    
 
     }
 
