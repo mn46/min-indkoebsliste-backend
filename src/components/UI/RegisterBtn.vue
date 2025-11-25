@@ -1,6 +1,6 @@
 <template>
     <v-btn class="register" 
-    :to="{path: '/register'}">register</v-btn>
+    :to="{path: '/register'}">Register</v-btn>
 </template>
 <script>
     export default{
@@ -17,5 +17,6 @@
 <style scoped>
 .register{
     background-color: gray;
+    
 }
 </style>

@@ -7,6 +7,7 @@
 </header>
 </template>
 <script>
+import { mdiWeatherMoonsetDown } from '@mdi/js'
 export default{
   name: 'TheHeaderAdmin',
     data(){
@@ -15,6 +16,7 @@ adminHeaderText: 'Personale',
 adminHeaderTitle:'Login',
         }
     }
+    
 }
 
 

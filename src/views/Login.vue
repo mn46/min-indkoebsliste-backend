@@ -41,6 +41,7 @@ import LoginBtnForm from '../components/UI/LoginBtnForm.vue'
 import TheFooter from   '../components/layout/TheFooter.vue'
 // import RegisterBtn from '../components/UI/RegisterBtn.vue'
 import LoginForm from '../components/LoginForm.vue';
+
 export default {
 
   components: {
