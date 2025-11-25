@@ -44,7 +44,7 @@ export default {
 
     login(){
       const data = {
-        userName: this.UserName,
+        userName: this.Username,
         userPassword: this.UserPassword
       }
     UsersDataService.signin(data).then((res) => {
