@@ -1,5 +1,7 @@
 <template>
-  <v-btn :to="{path: '/homepageadmin'}" >Login</v-btn>
+  <v-btn >Login</v-btn>
+    <!-- <v-btn :to="{path: '/homepageadmin'}" >Login</v-btn> -->
+
 </template>
 
 <script>
