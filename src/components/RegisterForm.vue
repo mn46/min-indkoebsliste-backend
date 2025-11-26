@@ -12,6 +12,12 @@
         type ="password"
         label="UserPassword"
       ></v-text-field>
+       <!-- <v-text-field
+        v-model="UserPasswordRepeated"
+        :rules="passwordRules"
+        type ="password"
+        label="UserPasswordRepeated"
+      ></v-text-field> -->
        
       <!-- <v-btn class="mt-2"  color="grey" type="submit" :to="{path:'/homepageadmin'}" block>Register</v-btn> -->
             <v-btn class="mt-2"  color="grey" type="submit"   block>Register</v-btn>
@@ -28,6 +34,7 @@ export default{
     name: 'RegisterForm',
     data(){
       return{
+
         Username: '',
         UserPassword: '',
         rules:[
@@ -46,13 +53,11 @@ export default{
       console.log(res);
           alert(`Bruger ${this.Username} er oprettet, venligst login`);
 
-    })
-
-// this.$router.push(`/homepageadmin/${user.id}`);
-// this.$router.push(`/homepageadmin/:id`);
+    }),
 this.$router.push(`/login`)
     }
-}
+}, 
+
 }
 </script>
 <style scoped>
