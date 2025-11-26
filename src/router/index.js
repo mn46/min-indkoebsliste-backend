@@ -3,6 +3,7 @@ import ListsView from "@/views/ListsView.vue";
 import ListDetails from "@/views/ListDetails.vue";
 import HomePage from "@/views/HomePage.vue";
 import AddNewList from "@/views/AddNewList.vue";
+import HomePageAdmin from "@/views/HomePageAdmin.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,6 +16,11 @@ const router = createRouter({
     {
       path: "/add-new",
       component: AddNewList,
+    },
+    {
+      path: "/admin",
+      name: "HomePageAdmin",
+      component: HomePageAdmin,
     },
     {
       path: "/lists",

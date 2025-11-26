@@ -110,7 +110,7 @@ function handleAlternativeSelected(index, originalCo2, { originalId, alternative
 }
 // ai*
 
-function replaceProduct(index, { originalId, alternative }) {
+/*function replaceProduct(index, { originalId, alternative }) {
   //replaceProduct funktion har to arugmenter (index+position af produktet list.value.items, den henter orginalid'et+ alternatives)
   const item = list.value.items[index]; //Finder specifikt produkt med alle produkter i listen. list.value.items er arrayet med alle produkter i listen og item er selve produktet som skal opdateres, hvis produkt ikke findes stopper funktionen.
   if (!item) return;
@@ -119,7 +119,7 @@ function replaceProduct(index, { originalId, alternative }) {
   item.id = `${originalId}`; //opdaterer produktets ID
   item.checked = false; //Fjerner "chekced"-statysu
   item.amount = item.amount;
-}
+}*/
 // SOFIE END
 
 const route = useRoute();
