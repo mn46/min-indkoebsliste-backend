@@ -15,7 +15,8 @@ export default{
 adminHeaderText: 'Personale',
 adminHeaderTitle:'Login',
         }
-    }
+    },
+    
     
 }
 

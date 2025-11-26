@@ -27,21 +27,22 @@ export default {
     };
   },
 
-  mounted() {
-    this.userId = this.$route.params.id;
+mounted() {
+  this.userId = this.$route.params.id; // ID fra URL
+  if (this.userId) {
     this.getUser(this.userId);
-  },
-
-  methods: {
-    getUser(id) {
-      UsersDataService.getUser(id)
-        .then(res => {
-          this.userName = res.data.userName;
-        })
-        .catch(err => {
-          console.error(err);
-        });
-    }
   }
+},
+
+methods: {
+  getUser(id) {
+    UsersDataService.getUser(id)
+      .then(res => {
+        this.userName = res.data.userName; // vis navnet
+      })
+      .catch(err => console.error(err));
+  }
+}
+
 };
 </script>

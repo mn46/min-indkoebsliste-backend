@@ -41,17 +41,28 @@ export default {
     
   },
   methods: {
+login() {
+  const data = {
+    userName: this.Username,
+    userPassword: this.UserPassword
+  };
 
-    login(){
-      const data = {
-        userName: this.Username,
-        userPassword: this.UserPassword
+  UsersDataService.signin(data)
+    .then(res => {
+      console.log("Login respons:", res.data);
+
+      const id = res.data.userId; 
+      if (!id) {
+        console.error("Backend returnerer ikke id!");
+        return;
       }
-    UsersDataService.signin(data).then((res) => {
-      console.log(res)
+
+      this.$router.push(`/users/${id}`);
     })
-    }
+    .catch(err => {
+      console.error(err);
+    });
     
   }
-}
+}}
 </script>

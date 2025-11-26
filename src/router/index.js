@@ -44,7 +44,7 @@ const router = createRouter({
 
     },
     {
-      path: "/homepageadmin/:id",
+      path: "/users/:id",
       component: HomePageAdmin,
       //  path: "/homepageadmin/:id",
 
