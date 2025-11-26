@@ -9,10 +9,15 @@
       <section class="px-4 py-8 flex-grow">
         <h2 class="text-center text-h5 text-grey-darken-1 mb-6">Homepage</h2>
 
-        <v-container class="pa-0" style="max-width: 400px;">
+         <v-container class="pa-0" style="max-width: 400px;">
           <v-row dense>
             <v-col cols="6" v-for="item in items" :key="item.label">
-              <v-card class="pa-6 d-flex flex-column align-center justify-center" elevation="4">
+              <v-card
+                class="pa-6 d-flex flex-column align-center justify-center"
+                elevation="4"
+                @click="goTo(item.route)"
+                style="cursor: pointer;"
+              >
                 <v-icon :icon="item.icon" size="32" color="#096123" />
                 <span class="text-body-2 mt-2" style="color: #096123">{{ item.label }}</span>
               </v-card>
@@ -28,28 +33,44 @@
 import axios from "axios";
 import { mdiOpenInNew, mdiPencil, mdiPlus, mdiTrashCan } from "@mdi/js";
 
+
 export default {
   name: "ResponsiveHomepage",
   data() {
     return {
       user: null,
       items: [
-        { label: "Se dine produkter", icon: mdiOpenInNew },
-        { label: "Kladde", icon: mdiPencil },
-        { label: "Tilføj produkt", icon: mdiPlus },
-        { label: "Slettet", icon: mdiTrashCan }
+        { label: "Se dine produkter", icon: mdiOpenInNew, route: "/lists" },
+        { label: "Kladde", icon: mdiPencil, route: "/lists/123" },
+        { label: "Tilføj produkt", icon: mdiPlus, route: "/add-new" },
+        { label: "Slettet", icon: mdiTrashCan, route: "/admin" }
       ]
     };
   },
-  async created() {
-    try {
-      const res = await axios.get("http://localhost:8080/api/me", {
-        withCredentials: true
-      });
-      this.user = res.data;
-    } catch (error) {
-      console.error("Error fetching user data:", error);
+
+  methods: {
+    goTo(route) {
+      this.$router.push(route);
     }
+  },
+
+
+  async mounted() {
+    // Automatic login for development
+    await axios.post(
+      "http://localhost:8080/api/users/sign-in",
+      {
+        userName: "testuser",
+        userPassword: "test1234"
+      },
+      { withCredentials: true }
+    );
+
+    // Get logged-in user
+    const res = await axios.get("http://localhost:8080/api/me", {
+      withCredentials: true
+    });
+    this.user = res.data;
   }
 };
 </script>
