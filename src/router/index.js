@@ -40,18 +40,27 @@ const router = createRouter({
     // },
     {
       path:"/login",
-      component: LoginPage
+      component: LoginPage,
+      meta:{
+        LoginDesc:'Personale',
+        adminHeaderTitle: 'Login'
+      }
 
     },
-    {
-      path: "/users/:id",
-      component: HomePageAdmin,
-      //  path: "/homepageadmin/:id",
-
-    },
+   {
+  path: "/users/:id",
+  component: HomePageAdmin,
+  meta: {
+    adminHeaderTitle: "Din side"
+  }
+},
     {
       path:"/register",
-      component: RegisterPage
+      component: RegisterPage,
+      meta: {
+        LoginDesc:'Indtast dig og',
+        adminHeaderTitle: 'Register'
+      }
     }
     //  {
     //   path: "/homepageadmin",

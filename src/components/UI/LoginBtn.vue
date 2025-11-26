@@ -71,7 +71,6 @@ this.$router.push('/login')
 .button-door{
   width: 32px;
   height: 32px;
-background: bluenpm ;
 }
 .button-door.login  {
 

@@ -55,21 +55,21 @@ login() {
       console.log("Login respons:", res.data);
 
       const id = res.data.userId; 
-      if (!id) {
-          this.loading = false;
+      // if (!id) {
+      //     this.loading = false;
 
-        console.error("Backend returnerer ikke id!");
-        return;
-      }
+      //   console.error("Backend returnerer ikke id!");
+      //   return;
+      // }
 
       this.$router.push(`/users/${id}`);
-                this.loading = false;
+                // this.loading = false;
 
     })
-    .catch(err => {
-      console.error(err);
-      alert('bruger findes ikke')
-    });
+    // .catch(err => {
+    //   console.error(err);
+    //   alert('bruger findes ikke')
+    // });
     
   }
 }}

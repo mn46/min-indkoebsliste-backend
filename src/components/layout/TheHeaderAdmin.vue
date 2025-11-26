@@ -1,8 +1,18 @@
 <template>
 <header>   
-    <p>{{adminHeaderText}}</p>
-     <h1>{{adminHeaderTitle}}</h1>
+    <p>{{$route.meta.LoginDesc}}</p>
+     <h1>{{$route.meta.adminHeaderTitle}}</h1>
+<!-- <template>
+  <header>
+    <h1>{{ $route.meta.adminHeaderTitle }}</h1>
+  </header>
+</template>
 
+<script>
+export default {
+  name: "TheHeaderAdmin",
+};
+</script> -->
 
 </header>
 </template>
@@ -12,8 +22,8 @@ export default{
   name: 'TheHeaderAdmin',
     data(){
         return{
-adminHeaderText: 'Personale',
-adminHeaderTitle:'Login',
+// adminHeaderText: 'Personale',
+// adminHeaderTitle:'Login',
         }
     },
     
