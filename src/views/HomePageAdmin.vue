@@ -2,7 +2,7 @@
   <v-app>
     <TheHeaderAdmin/>
       <main class="main-layout login-bg">
-            <h1> {{ this.userName }}</h1>
+            <h1> Hej{{ this.userName }}</h1>
 
 </main>
     <TheFooter/>
