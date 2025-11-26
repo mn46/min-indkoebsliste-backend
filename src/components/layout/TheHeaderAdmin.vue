@@ -1,18 +1,8 @@
 <template>
 <header>   
-    <p>{{$route.meta.LoginDesc}}</p>
+    <p>{{$route.meta.Desc}}</p>
      <h1>{{$route.meta.adminHeaderTitle}}</h1>
-<!-- <template>
-  <header>
-    <h1>{{ $route.meta.adminHeaderTitle }}</h1>
-  </header>
-</template>
 
-<script>
-export default {
-  name: "TheHeaderAdmin",
-};
-</script> -->
 
 </header>
 </template>

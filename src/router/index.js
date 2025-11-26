@@ -42,7 +42,7 @@ const router = createRouter({
       path:"/login",
       component: LoginPage,
       meta:{
-        LoginDesc:'Personale',
+        Desc:'Personale',
         adminHeaderTitle: 'Login'
       }
 
@@ -51,14 +51,16 @@ const router = createRouter({
   path: "/users/:id",
   component: HomePageAdmin,
   meta: {
-    adminHeaderTitle: "Din side"
+            Desc:'Din',
+
+    adminHeaderTitle: "Adminstrator side"
   }
 },
     {
       path:"/register",
       component: RegisterPage,
       meta: {
-        LoginDesc:'Indtast dig og',
+        Desc:'Indtast dig og',
         adminHeaderTitle: 'Register'
       }
     }
