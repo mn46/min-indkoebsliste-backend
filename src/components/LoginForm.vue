@@ -12,8 +12,9 @@
         type = "password"
         label="UserPassword" 
       ></v-text-field>
-      <v-btn color="grey" :to="{path:'/register' }">Register</v-btn>
-      <login-btn-form class="mt-2"  color="#096123"  type="submit" block></login-btn-form>
+
+      <v-btn color="grey" class="mt-2" :to="{path:'/register' }">Register</v-btn>
+      <login-btn-form class="mt-2"   color="#096123"  :loading="loading" type="submit" block></login-btn-form>
  </v-form>
   </v-sheet>
 </template>
@@ -31,6 +32,7 @@ export default {
 
   data() {
     return {
+      loading: false,
       Username: '',
       UserPassword: '',
       rules: [
@@ -42,6 +44,7 @@ export default {
   },
   methods: {
 login() {
+  this.loading = true;
   const data = {
     userName: this.Username,
     userPassword: this.UserPassword
@@ -53,14 +56,19 @@ login() {
 
       const id = res.data.userId; 
       if (!id) {
+          this.loading = false;
+
         console.error("Backend returnerer ikke id!");
         return;
       }
 
       this.$router.push(`/users/${id}`);
+                this.loading = false;
+
     })
     .catch(err => {
       console.error(err);
+      alert('bruger findes ikke')
     });
     
   }

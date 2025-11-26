@@ -4,7 +4,7 @@
     size="large"
     :to="{path: '/login'}"></v-btn> -->
 <div class="d-flex align-center flex-column justify-end ">
-           <button :class="['button-door login', backgroundBtnClass]" :to="{path: '/login'}" @click="handleClick"></button>
+           <button :class="['button-door', backgroundBtnClass]" :to="{path: '/login'}" @click="handleClick"></button>
     <p>Admin Login</p> 
     </div>
     
