@@ -50,8 +50,6 @@ export default {
     UsersDataService.signin(data).then((res) => {
       console.log(res)
     })
-    
-    
     }
     
   }

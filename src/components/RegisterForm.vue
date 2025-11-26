@@ -47,8 +47,8 @@ export default{
     })
 
 // this.$router.push(`/homepageadmin/${user.id}`);
-this.$router.push(`/homepageadmin/:id`);
-
+// this.$router.push(`/homepageadmin/:id`);
+this.$router.push(`/homepageadmin/:id`)
     }
 }
 }

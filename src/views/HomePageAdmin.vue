@@ -1,28 +1,47 @@
 <template>
   <v-app>
     <TheHeaderAdmin/>
-    
-  
-<TheFooter/>    
+      <main class="main-layout login-bg">
+            <h1> {{ this.userName }}</h1>
+
+</main>
+    <TheFooter/>
   </v-app>
 </template>
+
 <script>
-import ShoppingList from "../views/ShoppingList.vue";
-import PlusButton from "../components/PlusButton.vue";
-import TheHeader from "../components/layout/TheHeader.vue";
+import TheHeaderAdmin from "../components/layout/TheHeaderAdmin.vue";
 import TheFooter from "../components/layout/TheFooter.vue";
-import AddNewList from "../views/AddNewList.vue";
-import  TheHeaderAdmin from '../components/layout/TheHeaderAdmin.vue';
- "../views/layout/TheHeaderAdmin.vue";
+import UsersDataService from "@/services/UsersDataService";
 
 export default {
   components: {
-    ShoppingList,
-    PlusButton,
-    TheHeader,
-    TheFooter,
-    AddNewList,
     TheHeaderAdmin,
+    TheFooter
   },
+
+  data() {
+    return {
+      userName: "",
+      userId: null
+    };
+  },
+
+  mounted() {
+    this.userId = this.$route.params.id;
+    this.getUser(this.userId);
+  },
+
+  methods: {
+    getUser(id) {
+      UsersDataService.getUser(id)
+        .then(res => {
+          this.userName = res.data.userName;
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    }
+  }
 };
 </script>
