@@ -56,15 +56,7 @@ export default {
 
 
   async mounted() {
-    // Automatic login for development
-    await axios.post(
-      "http://localhost:8080/api/users/sign-in",
-      {
-        userName: "testuser",
-        userPassword: "test1234"
-      },
-      { withCredentials: true }
-    );
+    
 
     // Get logged-in user
     const res = await axios.get("http://localhost:8080/api/me", {
